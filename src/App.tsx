@@ -34,7 +34,21 @@ function App() {
 
   ];
   return (
-    <div className="w-screen h-screen bg-black flex justify-center items-start"></div>
+    <div className="w-screen h-screen bg-black flex justify-center items-start">
+      <div className="w-[89%] m-auto max-w-[1400px] bg-gray-300 p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl mb-6 font-semibold">
+          Frequently Asked Questions
+        </h2>
+        {
+          questions.map((q) => (
+            <div key={q.id} className="mb-4 last:mb-0">
+              <button className="w-full text-left text-xl focus:outline-none p-4 bg-gray-100 rounded-lg shadow-md flex justify-center items-center"></button>
+            </div>
+            
+          ))
+        }
+      </div>
+    </div>
   )
 }
 
